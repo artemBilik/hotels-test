@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Hotels\App;
+namespace Hotels;
 
-use Hotels\App\Exceptions\OptionCorruptedException;
-use Hotels\App\Exceptions\OptionParamNotExistsException;
+use Hotels\Exceptions\OptionCorruptedException;
+use Hotels\Exceptions\OptionParamNotExistsException;
 
 class Option
 {

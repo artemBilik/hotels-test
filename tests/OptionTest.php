@@ -1,8 +1,8 @@
 <?php
 
-use Hotels\App\Exceptions\OptionCorruptedException;
-use Hotels\App\Exceptions\OptionParamNotExistsException;
-use Hotels\App\Option;
+use Hotels\Exceptions\OptionCorruptedException;
+use Hotels\Exceptions\OptionParamNotExistsException;
+use Hotels\Option;
 use PHPUnit\Framework\TestCase;
 
 class OptionTest extends TestCase

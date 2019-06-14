@@ -1,6 +1,6 @@
 <?php
 
-namespace Hotels\App\Exceptions;
+namespace Hotels\Exceptions;
 
 
 use Exception;
