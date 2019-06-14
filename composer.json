@@ -1,0 +1,19 @@
+{
+  "name": "test/hotels",
+  "description": "test task about hotels",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Artem Bilik",
+      "email": "artem.bilik@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "autoload": {
+    "psr-4": {"Hotels\\": "src/"}
+  }
+}
