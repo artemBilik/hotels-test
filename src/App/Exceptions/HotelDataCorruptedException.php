@@ -4,9 +4,10 @@
 namespace Hotels\App\Exceptions;
 
 
-use Exception;
-
-class HotelDataCorruptedException extends Exception
+class HotelDataCorruptedException extends AppException
 {
-
+    public function __construct(string $line)
+    {
+        parent::__construct(sprintf('hotel data corrupted: [%s]', $line));
+    }
 }

@@ -24,12 +24,12 @@ class ReaderFactory
     public function create(string $type, string $encoder, string $filePath): ReaderInterface
     {
         if ($encoder === self::CSV_ENCODER) {
-            $parser = new CsvEncoder();
+            $encoder = new CsvEncoder();
         } else {
             throw new UnexpectedValueException('undefined encoder');
         }
         if ($type === self::FILE_READER) {
-            return new FileReader($filePath, $parser);
+            return new FileReader($filePath, $encoder);
         } else {
             throw new UnexpectedValueException('undefined reader');
         }

@@ -7,6 +7,7 @@ namespace Hotels\Storages\Encoders;
 use Hotels\App\Exceptions\HotelDataCorruptedException;
 use Hotels\Storages\Readers\DecodeInterface;
 use Hotels\App\Hotel;
+use UnexpectedValueException;
 
 class CsvEncoder implements DecodeInterface
 {
@@ -20,6 +21,10 @@ class CsvEncoder implements DecodeInterface
         if (count($fields) != 3) {
             throw new HotelDataCorruptedException($line);
         }
-        return new Hotel($fields[0], $fields[1], (int)$fields[2]);
+        try {
+            return new Hotel($fields[0], $fields[1], (int)$fields[2]);
+        } catch (UnexpectedValueException $e) {
+            throw new HotelDataCorruptedException($line);
+        }
     }
 }

@@ -4,9 +4,10 @@
 namespace Hotels\App\Exceptions;
 
 
-use Exception;
-
-class DecodeException extends Exception
+class DecodeException extends AppException
 {
-
+    public function __construct(string $error)
+    {
+        parent::__construct(sprintf('error while decode hotel: [%s]', $error));
+    }
 }

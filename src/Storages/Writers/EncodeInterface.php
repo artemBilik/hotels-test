@@ -4,14 +4,13 @@
 namespace Hotels\Storages\Writers;
 
 
-
-
 use Hotels\App\Exceptions\DecodeException;
+use Hotels\App\RowInterface;
 
 interface EncodeInterface
 {
     /**
-     * @param array $data
+     * @param  RowInterface[] $data
      * @return string
      * @throws DecodeException
      */

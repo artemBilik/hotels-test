@@ -45,7 +45,7 @@ class FileReader extends SplFileObject implements ReaderInterface
     public function read(): Hotel
     {
         if (!$this->eof()) {
-            return $this->encoder->decode($this->fgets());
+            return $this->encoder->decode(rtrim($this->fgets(), PHP_EOL));
         }
         throw new ReadHotelException();
     }

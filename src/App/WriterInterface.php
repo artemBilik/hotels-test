@@ -9,9 +9,9 @@ use Hotels\App\Exceptions\DecodeException;
 interface WriterInterface
 {
     /**
-     * @param mixed[] $row
+     * @param RowInterface $row
      */
-    public function persist(array $row): void;
+    public function persist(RowInterface $row): void;
 
     /**
      * @throws DecodeException

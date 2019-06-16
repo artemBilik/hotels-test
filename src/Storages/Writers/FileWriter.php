@@ -4,6 +4,7 @@
 namespace Hotels\Storages\Writers;
 
 
+use Hotels\App\RowInterface;
 use Hotels\App\WriterInterface;
 use RuntimeException;
 use SplFileObject;
@@ -25,9 +26,9 @@ class FileWriter extends SplFileObject implements WriterInterface
         }
     }
 
-    public function persist(array $row): void
+    public function persist(RowInterface $row): void
     {
-        $this->data[] = $row;
+        $this->data[] = $row->toArray();
     }
 
     public function flush(): void

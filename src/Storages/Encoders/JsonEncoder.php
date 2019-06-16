@@ -4,7 +4,7 @@
 namespace Hotels\Storages\Encoders;
 
 
-use Hotels\Storages\Exceptions\DecodeException;
+use Hotels\App\Exceptions\DecodeException;
 use Hotels\Storages\Writers\EncodeInterface;
 use JsonException;
 
