@@ -4,6 +4,11 @@
 * cd hotels-test
 * docker build -t hotels-test ./
 * docker run -it hotels-test /bin/bash
+
+# Пример запуска
+* cd /app
+* php src/main.php 'file(csv,/app/instance/hotels.csv)' 'group(name,sum)' 'file(json,/app/instance/group-sum-url.json)'
+
 # Запуск
 * php src/main.php 'reader' 'command' 'writer'
 
@@ -30,8 +35,3 @@
 * path - путь к файлу или к бд
 ### Доступные варианты
 * file(xml|json,/app/instance/order-by-url-desc.csv)
-
-
-# Пример запуска
-* cd /app
-* php src/main.php 'file(csv,/app/instance/hotels.csv)' 'group(name,sum)' 'file(json,/app/instance/group-sum-url.json)'
