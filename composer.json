@@ -9,7 +9,8 @@
     }
   ],
   "require": {
-    "ext-simplexml": "*"
+    "ext-simplexml": "*",
+    "ext-json": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^7"

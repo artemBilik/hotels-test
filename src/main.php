@@ -4,6 +4,7 @@ use Hotels\App\App;
 use Hotels\App\Exceptions\AppException;
 use Hotels\Commands\CommandFactory;
 use Hotels\Exceptions\OptionCorruptedException;
+use Hotels\Exceptions\OptionParamNotExistsException;
 use Hotels\Option;
 use Hotels\Storages\ReaderFactory;
 use Hotels\Storages\WriterFactory;
@@ -29,6 +30,9 @@ try {
     $command = (new CommandFactory())->create($command->getCommand(), $command->getParam('field'), $command->getParam('param'));
 } catch (UnexpectedValueException $e) {
     echo $e->getMessage() . "\n";
+    exit(1);
+} catch (OptionParamNotExistsException $e) {
+    echo "Неверная настройка программы\n";
     exit(1);
 }
 try {

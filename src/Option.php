@@ -23,7 +23,7 @@ class Option
     public function __construct(string $option, array $params)
     {
         $pieces = [];
-        if (1 !== preg_match('/^([a-z0-9]+)(\([a-z0-9\,\/\.\-]*\))$/', $option, $pieces)) {
+        if (1 !== preg_match('/^([a-z0-9]+)(\([a-z0-9,\/\.\-]*\))$/', $option, $pieces)) {
             throw new OptionCorruptedException($option);
         }
         $this->command = $pieces[1];
