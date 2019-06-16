@@ -12,3 +12,5 @@ RUN mv composer.phar /usr/local/bin/composer
 
 WORKDIR /app
 COPY . /app
+
+RUN composer install
