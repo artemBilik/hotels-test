@@ -7,7 +7,7 @@
 
 # Пример запуска
 * cd /app
-* php src/main.php 'file(csv,/app/instance/hotels.csv)' 'group(name,sum)' 'file(json,/app/instance/group-sum-url.json)'
+* php src/main.php 'file(csv,/app/instance/hotels.csv)' 'group(name,sum)' 'file(json,/app/instance/sum-by-name.json)'
 
 # Запуск
 * php src/main.php 'reader' 'command' 'writer'
